@@ -1,7 +1,16 @@
 const countTotalSalary = function (employees) {
   'use strict';
 
+  let totalSalary = 0;
+
+  const keys = Object.keys(employees);
+
+  for (const key of keys) {
+    totalSalary += employees[key];
+  }
+  return totalSalary;
 };
+
 // Объекты и ожидаемый результат
 const developers = {
   mango: 300,
